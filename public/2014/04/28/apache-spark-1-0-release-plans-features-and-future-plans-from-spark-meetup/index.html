@@ -1,0 +1,726 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="spark," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="上周由Patrick Wendell（Databricks创始人之一）主讲的Spark Meetup透露了Spark 1.0的发布计划、版本特性以及未来的一些发展计划
+演讲视频见：http://www.youtube.com/watch?v=NUQ-8to2XAk
+演讲ppt如下：
+
+
+&amp;nbsp;
+结合Meetup和之前Spark中国峰会的消息，Spark 1.0会在最近的两周发布，目前代码已冻">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spark 1.0 发布计划、版本特性与未来计划（From Spark Meetup）">
+<meta property="og:url" content="http://yoursite.com/2014/04/28/apache-spark-1-0-release-plans-features-and-future-plans-from-spark-meetup/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="上周由Patrick Wendell（Databricks创始人之一）主讲的Spark Meetup透露了Spark 1.0的发布计划、版本特性以及未来的一些发展计划
+演讲视频见：http://www.youtube.com/watch?v=NUQ-8to2XAk
+演讲ppt如下：
+
+
+&amp;nbsp;
+结合Meetup和之前Spark中国峰会的消息，Spark 1.0会在最近的两周发布，目前代码已冻">
+<meta property="og:image" content="http://peacefulby.com/wp-content/uploads/2014/04/Spark-1.0-Meetup-600x450.png">
+<meta property="og:updated_time" content="2017-03-15T08:15:10.916Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spark 1.0 发布计划、版本特性与未来计划（From Spark Meetup）">
+<meta name="twitter:description" content="上周由Patrick Wendell（Databricks创始人之一）主讲的Spark Meetup透露了Spark 1.0的发布计划、版本特性以及未来的一些发展计划
+演讲视频见：http://www.youtube.com/watch?v=NUQ-8to2XAk
+演讲ppt如下：
+
+
+&amp;nbsp;
+结合Meetup和之前Spark中国峰会的消息，Spark 1.0会在最近的两周发布，目前代码已冻">
+<meta name="twitter:image" content="http://peacefulby.com/wp-content/uploads/2014/04/Spark-1.0-Meetup-600x450.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2014/04/28/apache-spark-1-0-release-plans-features-and-future-plans-from-spark-meetup/"/>
+
+
+
+
+
+  <title> Spark 1.0 发布计划、版本特性与未来计划（From Spark Meetup） | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/04/28/apache-spark-1-0-release-plans-features-and-future-plans-from-spark-meetup/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Spark 1.0 发布计划、版本特性与未来计划（From Spark Meetup）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-04-28T15:10:40+00:00">
+                2014-04-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Spark/" itemprop="url" rel="index">
+                    <span itemprop="name">Spark</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>上周由<span style="color: rgba(0, 0, 0, 0.670588);">Patrick Wendell（Databricks创始人之一）主讲的<a href="http://www.meetup.com/spark-users/" target="_blank" rel="external">Spark Meetup</a>透露了Spark 1.0的发布计划、版本特性以及未来的一些发展计划</span></p>
+<p><span style="color: rgba(0, 0, 0, 0.670588);">演讲视频见：<a href="http://www.youtube.com/watch?v=NUQ-8to2XAk" target="_blank" rel="external">http://www.youtube.com/watch?v=NUQ-8to2XAk</a></span></p>
+<p>演讲ppt如下：</p>
+<iframe src="https://onedrive.live.com/embed?cid=FF5D4889707A3D16&amp;resid=FF5D4889707A3D16%21107&amp;authkey=AJrQinIrJBLnFko&amp;em=2" width="602" height="407" frameborder="0" scrolling="no"></iframe>
+
+<p>&nbsp;</p>
+<p><strong>结合Meetup和之前Spark中国峰会的消息<span style="color: rgba(0, 0, 0, 0.670588);">，Spark 1.0会在最近的两周发布，目前代码已冻结，也不会再进行Feature的增加，在进行最后的测试和bug fix中；Spark计划以三个月为周期迭代，因此Spark 1.1预计在8月份到来</span></strong></p>
+<p>ppt中比较有意思的是下面这张Slide，展示了近30天Spark与MapReduce、Storm、Yarn代码更新情况的对比，从对比中可以看到，Spark在近期的活跃度要远远高于其他三个项目（btw，我觉得一部分原因是因为Spark 1.0即将发布，各种Pacth和Bug fix等也会较为频繁，如果能增加一张Active Contributor数量对比图会更有说服力一些）</p>
+<p><a href="http://peacefulby.com/wp-content/uploads/2014/04/Spark-1.0-Meetup.png" target="_blank" rel="external"><img src="http://peacefulby.com/wp-content/uploads/2014/04/Spark-1.0-Meetup-600x450.png" alt="Spark 1.0 Meetup"></a></p>
+<p>从演讲视频与ppt来看，Spark 1.0以下几点新特性是我比较关注的：</p>
+<p>1、基于<span style="color: #222222;">Catalyst的Spark SQL支持</span></p>
+<p>由于多数企业对于大数据的应用场景停留在统计分析层面，这一新特性或者说新功能可以说这是最令人期待的。相比于目前Spark给出的解决方案Shark构建在Hive的SQL优化引擎之上，Spark SQL将采用内置的<span style="color: #222222;">Catalyst引擎用于SQL计划生成和优化；对于Spark SQL的优势我的理解是采用内置引擎一方面给后续的持续优化和改进提供可能，另一方面内置类型SchemaRDD可以向前接入其他RDD如TextRDD等，向后可以直接导出到机器学习库MLlib等作为输入，使用上更为灵活。更多Shark与Spark SQL的区别可以参见<a href="http://weibo.com/lianchengzju" target="_blank" rel="external">@连城</a> 老师在知乎上的这篇回答：<a href="http://www.zhihu.com/question/23182567" target="_blank" rel="external">http://www.zhihu.com/question/23182567</a></span></p>
+<p>2、Java8支持</p>
+<p>对于大部分没有接触过Scala的程序员来说，上手Scala还是有一定难度的，或者需要一定时间的学习；为了让更多人接触Spark，Spark 1.0对Java8进行了支持，同时对原有的Python接口进行了进一步的覆盖与扩展。以Java8为例，原来的函数需要在外部定义：</p>
+<p><pre>[cc lang=’java’ escaped=’true’]<br>class Split extends FlatMapFunction&lt;String, String&gt; {<br>  public Iterable&lt;String&gt; call(String s) {<br>    return Arrays.asList(s.split(“ “));<br>  }<br>);<br>JavaRDD&lt;String&gt; words = lines.flatMap(new Split());<br>[/cc]</pre><br>在Java8引入了Lambda表达式后，代码将更为简洁，也更贴近Scala/Python的语法：</p>
+<p><pre>[cc lang=’java’ escaped=’true’]<br>JavaRDD&lt;String&gt; words = lines.flatMap(s -&gt; Arrays.asList(s.split(“ “)));<br>[/cc]</pre><br>3、MLlib扩展</p>
+<p>作为一个基于内存的分布式计算框架，Spark在迭代式计算方面有很大的优势，也是许多机器学习算法发挥的地方，因此在过去6个月内，有多达35位Contributor在Spark的机器学习库MLlib上贡献，尽可能大地发挥Spark的长处。结合Meetup与峰会上<a href="http://weibo.com/yinxusen" target="_blank" rel="external">@尹绪森</a> 老师的演讲来看，MLlib至少会加入以下一些新的API或算法：</p>
+<p>（1）Vector/Matrix（dense or sparse）RDD的引入，方便开发者实现自己的ML算法</p>
+<p>（2）决策树算法</p>
+<p>（3）评估方法，包括AUC、ROC、Precision-Recall、F-measure等</p>
+<p>（4）SVD、PCA</p>
+<p>（5）Gibbs Sampling和LDA（<a href="http://weibo.com/yinxusen" target="_blank" rel="external">@尹绪森</a> 实现）</p>
+<p>除了以上三点，Spark 1.0还在WebUI方面增加了一些支持，可以查看更详细的eventLog和支持取消Job的操作；开发文档方面也更加完善，可见：<a href="http://www.cs.berkeley.edu/~marmbrus/sparkdocs/_site/api/core/index.html" target="_blank" rel="external">http://www.cs.berkeley.edu/~marmbrus/sparkdocs/_site/api/core/index.html</a></p>
+<p>在未来的Spark 1.1以及以后的版本，预计会继续完善Catalyst引擎并推广应用到Shark等产品当中，同时继续优化现有框架的性能和可用性，例如提供External Shuffle等，Streaming方面与Flume和Kafka的对接也在不断完善</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/spark/" rel="tag"># spark</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/04/07/introduction-to-neo4j-release-notes-and-installation-configurations/" rel="next" title="Neo4j简介、版本说明与安装配置">
+                <i class="fa fa-chevron-left"></i> Neo4j简介、版本说明与安装配置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/05/03/spark-1-0-on-yarn-installation-configuration-and-test-with-agents-over-the-wall/" rel="prev" title="Spark 1.0 on Yarn安装配置与测试（附翻墙代理）">
+                Spark 1.0 on Yarn安装配置与测试（附翻墙代理） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="John Doe" />
+          <p class="site-author-name" itemprop="name">John Doe</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">Kategorien</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">Tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>

@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>http://yoursite.com/2017/03/15/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Apache Spark参考资料地址汇总]]></title>
+      <url>http://yoursite.com/2014/05/04/spark-reference-address-summary/</url>
+      <content type="html"><![CDATA[<p>### </p>
+<h3 id="Spark相关官方网站："><a href="#Spark相关官方网站：" class="headerlink" title="Spark相关官方网站："></a>Spark相关官方网站：</h3><p>1、Apache Spark官方网站：<a href="http://spark.apache.org" target="_blank" rel="external">http://spark.apache.org</a></p>
+<p>2、Databricks官方网站：<a href="http://databricks.com/" target="_blank" rel="external">http://databricks.com/</a></p>
+<p>3、Spark最新技术文档：<a href="http://spark.apache.org/docs/latest/" target="_blank" rel="external">http://spark.apache.org/docs/latest/</a></p>
+<p>4、Spark-user官方论坛：<a href="http://apache-spark-user-list.1001560.n3.nabble.com/" target="_blank" rel="external">http://apache-spark-user-list.1001560.n3.nabble.com/</a></p>
+<p>&nbsp;</p>
+<h3 id="Spark最新进展追踪："><a href="#Spark最新进展追踪：" class="headerlink" title="Spark最新进展追踪："></a>Spark最新进展追踪：</h3><p>1、Spark最新代码：<a href="https://github.com/apache/spark" target="_blank" rel="external">https://github.com/apache/spark</a></p>
+<p>2、湾区Spark Meetup：<a href="http://www.meetup.com/spark-users/" target="_blank" rel="external">http://www.meetup.com/spark-users/</a></p>
+<p>3、湾区Spark Meetup活动视频：<a href="http://www.youtube.com/user/TheApacheSpark" target="_blank" rel="external">http://www.youtube.com/user/TheApacheSpark</a> （需翻墙）</p>
+<p>4、Spark Summit：<a href="http://spark-summit.org/" target="_blank" rel="external">http://spark-summit.org/</a></p>
+<p>&nbsp;</p>
+<h3 id="Spark相关技术文档："><a href="#Spark相关技术文档：" class="headerlink" title="Spark相关技术文档："></a>Spark相关技术文档：</h3><p>1、淘宝技术部：<a href="http://rdc.taobao.org/?tag=spark" target="_blank" rel="external">http://rdc.taobao.org/?tag=spark</a></p>
+<p>2、Spark简介</p>
+<p>UC技术部：<a href="http://tech.uc.cn/?p=2116" target="_blank" rel="external">Spark：一个高效的分布式计算系统</a></p>
+<p>IBM技术文档：<a href="http://www.ibm.com/developerworks/cn/opensource/os-spark/" target="_blank" rel="external">Spark，一种快速数据分析替代方案</a></p>
+<p>3、Spark源码与架构</p>
+<p><a href="http://jerryshao.me/architecture/2014/01/04/spark-shuffle-detail-investigation/" target="_blank" rel="external">详细探究Spark的shuffle实现</a></p>
+<p><a href="http://blog.csdn.net/pelick/article/category/1556747" target="_blank" rel="external">张包峰的Spark源码解读</a></p>
+<p><a href="http://blog.csdn.net/colorant/article/details/18549027" target="_blank" rel="external">Spark internal - 多样化的运行模式（上）</a>    <a href="http://blog.csdn.net/colorant/article/details/18603965" target="_blank" rel="external">Spark internal - 多样化的运行模式 （下）</a></p>
+<p>4、Spark应用案例</p>
+<p><a href="http://www.slideshare.net/krishflix/seattle-spark-meetup-spark-at-twitter" target="_blank" rel="external">Twitter应用案例</a> （需翻墙）</p>
+<p><a href="http://www.csdn.net/article/2013-12-26/2817929-Hadoop-Apache-Spark-Summit" target="_blank" rel="external">【PPT集萃】十位一线专家分享Spark现状与未来</a> （Spark Summit 2013的分享）</p>
+<p>&nbsp;</p>
+<h3 id="Spark国内部分技术牛人（排名不分先后）："><a href="#Spark国内部分技术牛人（排名不分先后）：" class="headerlink" title="Spark国内部分技术牛人（排名不分先后）："></a>Spark国内部分技术牛人（排名不分先后）：</h3><p>1、<a href="http://weibo.com/476691290" target="_blank" rel="external">@CrazyJvm</a>：国内对Spark内核了解最深的大牛之一</p>
+<p>2、<a href="http://weibo.com/lianchengzju" target="_blank" rel="external">@连城</a>：Spark SQL主要贡献者之一，Databricks员工</p>
+<p>3、<a href="http://weibo.com/mingfengandy" target="_blank" rel="external">@明风</a>：淘宝技术部数据挖掘与计算团队负责人，该团队是国内最早研究GraphX的团队之一</p>
+<p>4、<a href="http://weibo.com/u/1410938285" title="Andrew-Xia" target="_blank" rel="external">@Andrew-Xia</a>：就职于Intel的夏老师，Spark中国峰会2014的主持人</p>
+<p>5、<a href="http://weibo.com/yinxusen" target="_blank" rel="external">@尹绪森</a>：MLlib中Gibbs Sampling和LDA的作者</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Spark </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> spark </tag>
+            
+            <tag> apache </tag>
+            
+            <tag> hadoop </tag>
+            
+            <tag> 云计算 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Spark 1.0 on Yarn安装配置与测试（附翻墙代理）]]></title>
+      <url>http://yoursite.com/2014/05/03/spark-1-0-on-yarn-installation-configuration-and-test-with-agents-over-the-wall/</url>
+      <content type="html"><![CDATA[<p>Spark 1.0应该很快要发布了，等不急于是手痒下载源码编译安装了一下，记录一下过程；由于目前公司已有Hadoop 2.2.0集群，因此主要试用了一下Spark on Yarn模式</p>
+<p><strong>集群环境</strong>：Hadoop-2.2.0</p>
+<p><strong>客户端环境</strong>：CentOS 6.2、Java 6</p>
+<p><strong>客户端待安装</strong>：Scala 2.10.4、Spark 1.0.0（SNAPSHOT）</p>
+<p>&nbsp;</p>
+<h3 id="1、安装scala-2-10-4"><a href="#1、安装scala-2-10-4" class="headerlink" title="1、安装scala 2.10.4"></a>1、安装scala 2.10.4</h3><p>根据Spark 源码里的文档，Spark 1.0.0依赖于scala 2.10.4，不过应该2.10.x版的都可以</p>
+<p>下载<a href="http://www.scala-lang.org/files/archive/scala-2.10.4.tgz" target="_blank" rel="external">scala 2.10.4</a> 并解压，同时设置好SCALA_HOME和PATH：</p>
+<pre>[cc lang='bash' escaped='true']
+$ wget http://www.scala-lang.org/files/archive/scala-2.10.4.tgz
+$ tar -zxvf scala-2.10.4.tgz
+$ sudo mv scala-2.10.4 /usr/local
+$ sudo vim /etc/profile #或 vim ~/.bash_profile 设置个人环境变量，下同
+# 设置环境变量，将以下行加入到文件末尾
+export SCALA_HOME=/usr/local/scala-2.10.4
+export PATH=$PATH:$SCALA_HOME/bin
+# 保存退出
+$ source /etc/profile # 导入刚刚设置的环境变量
+$ scala -version # 测试是否安装成功
+Scala code runner version 2.10.4 -- Copyright 2002-2013, LAMP/EPFL
+[/cc]</pre>
+
+<h3 id="2、下载Spark源码并编译"><a href="#2、下载Spark源码并编译" class="headerlink" title="2、下载Spark源码并编译"></a>2、下载Spark源码并编译</h3><h4 id="2-1、下载源码"><a href="#2-1、下载源码" class="headerlink" title="2.1、下载源码"></a>2.1、下载源码</h4><p>如果Spark官方提供了prebuilt版，那么建议直接下载prebuilt版（<a href="http://d3kbcqa49mib13.cloudfront.net/spark-0.9.1-bin-hadoop2.tgz" target="_blank" rel="external">最新的0.9.1-Hadoop 2.2.0的prebuilt版</a>）解压即可立即上手使用，无需编译；</p>
+<p>但如果像我这样想试用一下最新的Feature或功能，那么还是得从github下载Spark源码编译（目前是1.0.0-SNAPSHOT版本）：</p>
+<pre>[cc lang='bash' escaped='true']
+$ cd /usr/local
+$ sudo git clone https://github.com/apache/spark.git spark_source
+$ sudo vim /etc/profile # 设置spark目录位置，将以下行加入到文件末尾
+export SPARK_HOME=/usr/local/spark_source
+export PATH=$PATH:$SPARK_HOME/bin 
+# 保存退出 
+[/cc]</pre>
+
+<h4 id="2-2、配置翻墙代理"><a href="#2-2、配置翻墙代理" class="headerlink" title="2.2、配置翻墙代理"></a>2.2、配置翻墙代理</h4><p>由于有一个依赖的twitter4j的库被伟大的G♂F♂W墙了，如果有VPN最好，否则需要先架设和配置一下翻墙代理，建议使用GAE上的<a href="https://code.google.com/p/goagent/" target="_blank" rel="external">goagent</a>自行架设一个；如果服务器端已架设，下载客户端的并配置运行（spark-build是我配置用来编译spark的代理，如果无法架设成功可以直接使用这个，不过不要滥用:P）：</p>
+<pre>[cc lang='bash' escaped='true']
+$ cd local
+$ vim proxy.ini
+...
+[gae]
+appid = spark-build #你的APPID 
+password = 
+...
+#保存退出
+$ sudo python proxy.py &amp; 
+[/cc]</pre>
+然后配置代理的环境变量（[@连城](http://weibo.com/lianchengzju) 在知乎[这篇回答](http://www.zhihu.com/question/23245141)提到的SBT_OPTS设置项不一定生效，建议配置为JAVA_OPTS）：
+<pre>[cc lang='bash' escaped='true']
+$ sudo vim /etc/profile # 设置环境变量，将以下行加入到文件末尾
+#export SBT_OPTS="$SBT_OPTS -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8087"
+export JAVA_OPTS="$JAVA_OPTS -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8087"
+# 保存退出
+$ source /etc/profile # 导入刚刚设置的环境变量
+[/cc]</pre>
+
+<h4 id="2-3、编译源码"><a href="#2-3、编译源码" class="headerlink" title="2.3、编译源码"></a>2.3、编译源码</h4><p>代理配置完成之后，根据集群版本编译Spark源码，根据网速不同大约20~30分钟编译完成：</p>
+<pre>[cc lang='bash' escaped='true']
+$ cd $SPARK_HOME
+$ SPARK_HADOOP_VERSION=2.2.0 SPARK_YARN=true sbt/sbt assembly
+...
+[info] Done packaging.
+[success] Total time: 1152 s, completed May 3, 2014 6:21:09 PM
+[/cc]</pre>
+编译完成后，会在$SPARK_HOME/assembly/target/scala-2.10目录下生成spark-assembly-1.0.0-SNAPSHOT-hadoop2.2.0.jar文件，也就是spark的核心jar文件。
+
+&nbsp;
+
+### 3、本地与Yarn模式测试
+
+#### 3.1、配置spark属性
+
+将spark核心文件地址设置到环境变量中：
+<pre>[cc lang='bash' escaped='true']
+$ sudo vim /etc/profile # 设置环境变量，将以下行加入到文件末尾
+export SPARK_JAR=$SPARK_HOME/assembly/target/scala-2.10/spark-assembly-1.0.0-SNAPSHOT-hadoop2.2.0.jar
+# 保存退出
+$ source /etc/profile # 导入刚刚设置的环境变量
+[/cc]</pre>
+同时设置spark运行时的一些属性：
+<pre>[cc lang='bash' escaped='true']
+$ cd $SPARK_HOME/conf
+$ sudo cp spark-env.sh.template spark-env.sh
+$ sudo vim spark-env.sh # 文件里有各项的详细解释就不多列举了，如果要On Yarn运行的话下面这项是必选的
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop # HADOOP_HOME为Hadoop安装的目录
+[/cc]</pre>
+
+<h4 id="3-2、本地模式测试"><a href="#3-2、本地模式测试" class="headerlink" title="3.2、本地模式测试"></a>3.2、本地模式测试</h4><pre>[cc lang='bash' escaped='true']
+$ run-example org.apache.spark.examples.SparkPi local # 本地单线程模式
+...
+14/05/03 23:35:23 INFO SparkContext: Job finished: reduce at SparkPi.scala:39, took 1.223735661 s
+Pi is roughly 3.14228
+$ run-example org.apache.spark.examples.SparkPi local[4] # 本地多线程模式
+...
+14/05/03 23:37:01 INFO SparkContext: Job finished: reduce at SparkPi.scala:39, took 1.060589206 s
+Pi is roughly 3.14226
+[/cc]</pre>
+
+<h4 id="3-3、Yarn模式测试"><a href="#3-3、Yarn模式测试" class="headerlink" title="3.3、Yarn模式测试"></a>3.3、Yarn模式测试</h4><p><pre>[cc lang=’bash’ escaped=’true’]<br>$ run-example org.apache.spark.examples.SparkPi yarn-client # 提交SparkPi Job<br>…<br>14/05/03 23:38:37 INFO YarnClientSchedulerBackend: Application report from ASM:<br> appMasterRpcPort: 0<br> appStartTime: 1399131517104<br> yarnAppState: ACCEPTED<br>…<br>14/05/03 23:38:47 INFO SparkContext: Job finished: reduce at SparkPi.scala:39, took 4.383655572 s<br>Pi is roughly 3.1414</pre></p>
+<p>$ MASTER=yarn-client spark-shell # spark-shell模式<br>…<br>14/05/03 23:40:01 INFO YarnClientSchedulerBackend: Application report from ASM:<br> appMasterRpcPort: 0<br> appStartTime: 1399131601515<br> yarnAppState: ACCEPTED<br>…<br>14/05/03 23:40:07 INFO SparkILoop: Created spark context..<br>Spark context available as sc.</p>
+<p>scala&gt; val file = sc.textFile(“hdfs://ip:8020/file”) // 读取hdfs文件<br>file: org.apache.spark.rdd.RDD[String] = MappedRDD[3] at textFile at &lt;console&gt;:12<br>scala&gt; file.count()<br>…<br>14/05/03 23:41:01 INFO SparkContext: Job finished: count at &lt;console&gt;:15, took 18.676700057 s<br>res0: Long = 13347<br>[/cc]<br>至此，Spark 1.0 on Yarn安装完毕</p>
+<p>&nbsp;</p>
+<p>参考文档：</p>
+<p>1、Apache Spark官方网站：<a href="https://spark.incubator.apache.org" target="_blank" rel="external">https://spark.incubator.apache.org
+</a></p>
+<p>2、Spark最新文档：<a href="http://www.cs.berkeley.edu/~marmbrus/sparkdocs/_site/running-on-yarn.html" target="_blank" rel="external">http://www.cs.berkeley.edu/~marmbrus/sparkdocs/_site/running-on-yarn.html</a></p>
+<p>3、Spark文档 in Code：<a href="https://github.com/apache/spark/blob/master/docs/running-on-yarn.md" target="_blank" rel="external">https://github.com/apache/spark/blob/master/docs/running-on-yarn.md</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Spark </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> spark </tag>
+            
+            <tag> apache </tag>
+            
+            <tag> hadoop </tag>
+            
+            <tag> yarn </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Spark 1.0 发布计划、版本特性与未来计划（From Spark Meetup）]]></title>
+      <url>http://yoursite.com/2014/04/28/apache-spark-1-0-release-plans-features-and-future-plans-from-spark-meetup/</url>
+      <content type="html"><![CDATA[<p>上周由<span style="color: rgba(0, 0, 0, 0.670588);">Patrick Wendell（Databricks创始人之一）主讲的<a href="http://www.meetup.com/spark-users/" target="_blank" rel="external">Spark Meetup</a>透露了Spark 1.0的发布计划、版本特性以及未来的一些发展计划</span></p>
+<p><span style="color: rgba(0, 0, 0, 0.670588);">演讲视频见：<a href="http://www.youtube.com/watch?v=NUQ-8to2XAk" target="_blank" rel="external">http://www.youtube.com/watch?v=NUQ-8to2XAk</a></span></p>
+<p>演讲ppt如下：</p>
+<iframe src="https://onedrive.live.com/embed?cid=FF5D4889707A3D16&amp;resid=FF5D4889707A3D16%21107&amp;authkey=AJrQinIrJBLnFko&amp;em=2" width="602" height="407" frameborder="0" scrolling="no"></iframe>
+
+<p>&nbsp;</p>
+<p><strong>结合Meetup和之前Spark中国峰会的消息<span style="color: rgba(0, 0, 0, 0.670588);">，Spark 1.0会在最近的两周发布，目前代码已冻结，也不会再进行Feature的增加，在进行最后的测试和bug fix中；Spark计划以三个月为周期迭代，因此Spark 1.1预计在8月份到来</span></strong></p>
+<p>ppt中比较有意思的是下面这张Slide，展示了近30天Spark与MapReduce、Storm、Yarn代码更新情况的对比，从对比中可以看到，Spark在近期的活跃度要远远高于其他三个项目（btw，我觉得一部分原因是因为Spark 1.0即将发布，各种Pacth和Bug fix等也会较为频繁，如果能增加一张Active Contributor数量对比图会更有说服力一些）</p>
+<p><a href="http://peacefulby.com/wp-content/uploads/2014/04/Spark-1.0-Meetup.png" target="_blank" rel="external"><img src="http://peacefulby.com/wp-content/uploads/2014/04/Spark-1.0-Meetup-600x450.png" alt="Spark 1.0 Meetup"></a></p>
+<p>从演讲视频与ppt来看，Spark 1.0以下几点新特性是我比较关注的：</p>
+<p>1、基于<span style="color: #222222;">Catalyst的Spark SQL支持</span></p>
+<p>由于多数企业对于大数据的应用场景停留在统计分析层面，这一新特性或者说新功能可以说这是最令人期待的。相比于目前Spark给出的解决方案Shark构建在Hive的SQL优化引擎之上，Spark SQL将采用内置的<span style="color: #222222;">Catalyst引擎用于SQL计划生成和优化；对于Spark SQL的优势我的理解是采用内置引擎一方面给后续的持续优化和改进提供可能，另一方面内置类型SchemaRDD可以向前接入其他RDD如TextRDD等，向后可以直接导出到机器学习库MLlib等作为输入，使用上更为灵活。更多Shark与Spark SQL的区别可以参见<a href="http://weibo.com/lianchengzju" target="_blank" rel="external">@连城</a> 老师在知乎上的这篇回答：<a href="http://www.zhihu.com/question/23182567" target="_blank" rel="external">http://www.zhihu.com/question/23182567</a></span></p>
+<p>2、Java8支持</p>
+<p>对于大部分没有接触过Scala的程序员来说，上手Scala还是有一定难度的，或者需要一定时间的学习；为了让更多人接触Spark，Spark 1.0对Java8进行了支持，同时对原有的Python接口进行了进一步的覆盖与扩展。以Java8为例，原来的函数需要在外部定义：</p>
+<p><pre>[cc lang=’java’ escaped=’true’]<br>class Split extends FlatMapFunction&lt;String, String&gt; {<br>  public Iterable&lt;String&gt; call(String s) {<br>    return Arrays.asList(s.split(“ “));<br>  }<br>);<br>JavaRDD&lt;String&gt; words = lines.flatMap(new Split());<br>[/cc]</pre><br>在Java8引入了Lambda表达式后，代码将更为简洁，也更贴近Scala/Python的语法：</p>
+<p><pre>[cc lang=’java’ escaped=’true’]<br>JavaRDD&lt;String&gt; words = lines.flatMap(s -&gt; Arrays.asList(s.split(“ “)));<br>[/cc]</pre><br>3、MLlib扩展</p>
+<p>作为一个基于内存的分布式计算框架，Spark在迭代式计算方面有很大的优势，也是许多机器学习算法发挥的地方，因此在过去6个月内，有多达35位Contributor在Spark的机器学习库MLlib上贡献，尽可能大地发挥Spark的长处。结合Meetup与峰会上<a href="http://weibo.com/yinxusen" target="_blank" rel="external">@尹绪森</a> 老师的演讲来看，MLlib至少会加入以下一些新的API或算法：</p>
+<p>（1）Vector/Matrix（dense or sparse）RDD的引入，方便开发者实现自己的ML算法</p>
+<p>（2）决策树算法</p>
+<p>（3）评估方法，包括AUC、ROC、Precision-Recall、F-measure等</p>
+<p>（4）SVD、PCA</p>
+<p>（5）Gibbs Sampling和LDA（<a href="http://weibo.com/yinxusen" target="_blank" rel="external">@尹绪森</a> 实现）</p>
+<p>除了以上三点，Spark 1.0还在WebUI方面增加了一些支持，可以查看更详细的eventLog和支持取消Job的操作；开发文档方面也更加完善，可见：<a href="http://www.cs.berkeley.edu/~marmbrus/sparkdocs/_site/api/core/index.html" target="_blank" rel="external">http://www.cs.berkeley.edu/~marmbrus/sparkdocs/_site/api/core/index.html</a></p>
+<p>在未来的Spark 1.1以及以后的版本，预计会继续完善Catalyst引擎并推广应用到Shark等产品当中，同时继续优化现有框架的性能和可用性，例如提供External Shuffle等，Streaming方面与Flume和Kafka的对接也在不断完善</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Spark </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> spark </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Neo4j简介、版本说明与安装配置]]></title>
+      <url>http://yoursite.com/2014/04/07/introduction-to-neo4j-release-notes-and-installation-configurations/</url>
+      <content type="html"><![CDATA[<p><a href="http://peacefulby.com/wp-content/uploads/2014/02/neo4j2.png" target="_blank" rel="external"><img src="http://peacefulby.com/wp-content/uploads/2014/02/neo4j2.png" alt="neo4j"></a></p>
+<h3 id="Neo4j简介"><a href="#Neo4j简介" class="headerlink" title="Neo4j简介"></a>Neo4j简介</h3><p><span style="line-height: 1.5em;">随着社交网站的不断发展，数据量越来越大，原来用传统RDBMS存储数据的应用面临新的挑战。一些典型的社交网站例如Facebook、Linkedin等，用户以及用户之间的关系可以用一张图来表示；在RDBMS中，如果要存储一张图来表示用户和用户之间的关系，一般会将用户（节点）和关系（边）分别存储为两张表，这样带来的问题就在于，当需要快速地在图中进行遍历（例如在Linkedin中回答“如何通过最少的人找到XX公司的HR”这类问题）或执行一些其他的图操作时，往往捉襟见肘：要么耗费大量时间在关系表上不断地做关联操作，要么耗费大量内存将整张图或部分图缓存起来。</span></p>
+<p>为了解决上面基于图数据存储、遍历等一系列问题，<a href="http://www.neo4j.org" target="_blank" rel="external">Neo4j</a>应运而生（类似的图数据库还有Infinite Graph等）。Neo4j是一个基于Java开发的、完全兼容ACID的开源图形数据库。与RDBMS不同，Neo4j针对图结构在存储等方面进行了专门的索引和优化。Neo4j中有五种主要的存储结构与概念:</p>
+<p>1、Node：Neo4j中的基本结构，表示结点。</p>
+<p>2、Relation：Neo4j中的基本结构，表示一条有向边，也即两个节点的关系。</p>
+<p>3、Property：key-value键值对，表示Node和Relation的属性（一个Node或Relation可以有多个属性）</p>
+<p>4、Index：Node或Relation的索引，可以通过索引建立key-value键值对，实现到Node或Relation的映射。</p>
+<p>5、Traversal：根据一定条件对图进行遍历的过程。可以指定方向，深度，优先条件（深度优先、广度优先）等条件。</p>
+<p>&nbsp;</p>
+<h3 id="Neo4j版本说明"><a href="#Neo4j版本说明" class="headerlink" title="Neo4j版本说明"></a>Neo4j版本说明</h3><p>Neo4j目前一共有4个版本：社区版（免费）、个人版（登记后免费）、中小企业版（12K刀一年）、商业版（根据具体情况收费），其中后面三个功能基本一致，不同在于Email、电话等服务方面；社区版比后三者相比，主要是不支持集群和高性能Cache。详细见：<a href="http://www.neotechnology.com/price-list/" target="_blank" rel="external">http://www.neotechnology.com/price-list/</a></p>
+<p>版本号方面，需要注意的一点是Neo4j2.0不支持Java6，需要Java7（详见 <a href="http://www.neo4j.org/release-notes" target="_blank" rel="external">ChangeLog</a>）；1.9版本最新支持的发行版为1.9.6</p>
+<p>&nbsp;</p>
+<h3 id="Neo4j安装配置"><a href="#Neo4j安装配置" class="headerlink" title="Neo4j安装配置"></a>Neo4j安装配置</h3><p>在<a href="http://www.neo4j.org/download/other_versions" target="_blank" rel="external">这里</a>选择相应的操作系统和版本下载安装包并解压；Linux下在解压后的根目录，Neo4j2.0版本执行bin/neo4j-installer install，1.9以下版本执行bin/neo4j install进行安装</p>
+<p>安装完成后，执行bin/neo4j start启动服务</p>
+<p>一些常用配置项，更多可参考<a href="http://docs.neo4j.org/chunked/stable/configuration-jvm.html" target="_blank" rel="external">官方文档</a>：</p>
+<p>内存：conf/neo4j-wrapper.conf</p>
+<p>[cc lang=’java’ line_numbers=’false’]</p>
+<p>wrapper.java.initmemory=4000  //初始化内存，单位MB</p>
+<p>wrapper.java.maxmemory=8000  //最大占用内存，单位MB</p>
+<p>[/cc]</p>
+<p>Web访问：conf/neo4j-server.properties</p>
+<p>[cc lang=’java’ line_numbers=’false’]org.neo4j.server.webserver.address=0.0.0.0  //开放Web管理页面，用于外部访问[/cc]</p>
+<p>自动索引：conf/neo4j.properties</p>
+<p>[cc lang=’java’ line_numbers=’false’]</p>
+<p>node_auto_indexing=true</p>
+<p>node_keys_indexable=  //节点自动索引字段</p>
+<p>relationship_auto_indexing=true</p>
+<p>relationship_keys_indexable=  //边自动索引字段</p>
+<p>[/cc]</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 图数据库 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> graph database </tag>
+            
+            <tag> neo4j </tag>
+            
+            <tag> nosql </tag>
+            
+            <tag> 图数据库 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Python第三方库-网络包-requests]]></title>
+      <url>http://yoursite.com/2014/03/04/python-third-party-libraries-network-packet-requests/</url>
+      <content type="html"><![CDATA[<p>正如 python 第三方库-requests 库<a href="http://docs.python-requests.org/en/latest/index.html" title="requests" target="_blank" rel="external">官方主页</a>标题所说：It’s HTTP for Humans! 言下之意是说其他HTTP库都不是给Humans用的…… 尽管 python 下的 urllib 和 urllib2 比起 Java 的 HttpURLConnection 已经足够简单易用，相比之下 requests 库依然人性化到逆天。 以访问百度首页为例，urllib2 方式访问：</p>
+<pre>[cc lang='python' escaped='true']
+&gt;&gt;&gt; import urllib2
+&gt;&gt;&gt; r = urllib2.Request('http://www.baidu.com') 
+&gt;&gt;&gt; response = urllib2.urlopen(r)
+&gt;&gt;&gt; print response.read()
+&lt;!DOCTYPE html&gt;&lt;!--STATUS OK--&gt;&lt;html&gt;&lt;head...
+[/cc]</pre>
+而requests只需要：
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; import requests
+&gt;&gt;&gt; r = requests.get('http://www.baidu.com')
+&gt;&gt;&gt; print r.text
+&lt;!DOCTYPE html&gt;&lt;!--STATUS OK--&gt;&lt;html&gt;&lt;head...
+[/cc]</pre>
+requests有官方[中文文档](http://cn.python-requests.org/en/latest/ "requests中文文档")（目前更新到1.1.0版）和[英文文档](http://docs.python-requests.org/en/latest/ "requests文档")（更新到最新版），大部分特性和示例都可以在文档中找到。以下记录一些requests的安装、基本应用和常用特性，其他的想到或用到再往上补充吧
+
+### 1、安装
+
+Windows环境下在 [这里](https://github.com/kennethreitz/requests/tarball/master "requests安装包") 下载安装包并解压后，执行 **python setup.py install** 安装 Linux环境下直接执行 **easy_install requests** 或 **pip install requests** 即可
+
+### 2、基本应用-访问
+
+requests支持所有访问http访问方式，常用的Get和Post方式使用方式如下： Get方式下，参数的提交可以采用直接拼接URL的方式，也可以采用params参数传递：
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; r = requests.get('http://www.baidu.com/s?wd=测试')
+&gt;&gt;&gt; r = requests.get('http://www.baidu.com/s?',params={'wd':'测试'})
+[/cc]</pre>
+Post方式下，提交参数的方式和上面第二种方式类似：
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; r = requests.post('http://www.baidu.com/s?',data={'wd':'测试'})
+[/cc]</pre>
+
+<h3 id="3、基本应用-返回"><a href="#3、基本应用-返回" class="headerlink" title="3、基本应用-返回"></a>3、基本应用-返回</h3><p>我们可以通过r.text直接获取返回的html网页，或者通过r.content获取网页的字节内容：</p>
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; r = requests.get('http://www.baidu.com')
+&gt;&gt;&gt; r.text
+u'&lt;!DOCTYPE html&gt;&lt;!--STATUS OK--&gt;&lt;html&gt;&lt;head...'
+&gt;&gt;&gt; r.content
+b'&lt;!DOCTYPE html&gt;&lt;!--STATUS OK--&gt;&lt;html&gt;&lt;head...' 
+[/cc]</pre>
+值得一提的一点是，requests包本身还自带了json解析方法，在现在大量API支持json格式数据的时代，无疑是快速开发一个第三方应用的利器：
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; r = requests.get('https://github.com/timeline.json')
+&gt;&gt;&gt; r.json()
+[{u'repository': {u'open_issues': 0, u'url': 'https://github.com/...
+[/cc]</pre>
+除此以外，我们还可以获取其他返回的相关信息：
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; r = requests.get('http://www.baidu.com')
+&gt;&gt;&gt; r.status_code  #状态码
+200
+&gt;&gt;&gt; r.headers['content-type']  #响应头
+'text/html'
+&gt;&gt;&gt; r.encoding  #网页编码
+'ISO-8859-1'
+&gt;&gt;&gt; r.url
+u'http://www.baidu.com/'
+[/cc]</pre>
+
+<h3 id="4、Basic-Auth"><a href="#4、Basic-Auth" class="headerlink" title="4、Basic Auth"></a>4、Basic Auth</h3><p>在一些大型平台提供的第三方API中，不少API提供了Basic Auth方式登录获取信息，以便开发者进行快速开发与调试，例如<a href="http://open.weibo.com/wiki/2/statuses/home_timeline" target="_blank" rel="external">新浪微博API</a>；以下一段代码展示了如何获取用户所关注的用户的最新微博：</p>
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; url = 'https://api.weibo.com/2/statuses/home_timeline.json?source=XXXXXXXXXX'  #source为AppKey
+&gt;&gt;&gt; username = 'user@example.com'  #新浪微博用户名
+&gt;&gt;&gt; password = 'password'  #密码
+&gt;&gt;&gt; r = requests.get(url,auth=(username, password))
+&gt;&gt;&gt; r.json()
+{u'total_number': 1111, u'previous_cursor': 0, u'hasvisible': False ...
+[/cc]</pre>
+
+<h3 id="5、代理"><a href="#5、代理" class="headerlink" title="5、代理"></a>5、代理</h3><p>如果是编写爬虫或一些其他网络抓取脚本，有时需要采用代理避免被封IP，在requests中可以直接使用proxies属性配置</p>
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; proxies = {"http": "http://0.0.0.0:80/"}
+&gt;&gt;&gt; requests.get("http://www.baidu.com", proxies=proxies)
+[/cc]</pre>
+如果代理需要用户名和密码验证，可以用HTTP Basic Auth方式配置如下：
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; proxies = {"http": "http://user:pass@0.0.0.0:80/"} 
+[/cc]</pre>]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> http </tag>
+            
+            <tag> json </tag>
+            
+            <tag> python </tag>
+            
+            <tag> requests </tag>
+            
+            <tag> urllib </tag>
+            
+            <tag> urllib2 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[教育网环境下iOS6系统的离线升级与更新（附6.1.3离线包地址）]]></title>
+      <url>http://yoursite.com/2013/04/05/ios6-system-upgrades-and-updates-under-the-network-of-education-environment-with-6-1-3-offline-package-address/</url>
+      <content type="html"><![CDATA[<p>最近想把刚买的Touch升级到刚发布的iOS6.1.3，期间遇到各种诸如教育网无法访问iTunes、C盘空间不足这样令人蛋碎的问题；尤其是要用教育网到公网的这条小水管穿越到大洋彼岸，下载一坨大到800MB的更新包，顿时觉得压力很大。好在iTunes提供了一种比较隐蔽的离线升级方式，可以先用P2P下载工具将苹果官方提供的更新包下载到本地，然后进行系统升级并联网验证。</p>
+<p>以下记录一些期间遇到的问题和自己的解决方案： </p>
+<p>&nbsp;</p>
+<p><span style="font-size: large;"><strong>1、教育网环境下iTunes访问</strong></span></p>
+<p>由于iTunes和apple大部分服务器地址都不在教育网免费地址以内，因此需要使用代理访问；iTunes在网络连接时使用的是IE代理，以下两个站点可以提供比较常用的教育网访问公网的代理及设置教程：</p>
+<p>清华IPCN：<a href="http://proxy.ipcn.org/" title="清华IPCN" target="_blank" rel="external">http://proxy.ipcn.org/</a></p>
+<p>代理服务器网：<a href="http://www.cnproxy.com/proxyedu1.html" title="代理服务器网" target="_blank" rel="external">http://www.cnproxy.com/proxyedu1.html</a></p>
+<p>上面提供的代理地址是临时地址，如果需要稳定的代理则推荐使用搜狗浏览器的某些过期版本的教育网加速代理功能，撸主使用的是2.2.0.2070版本，前后几个版本均可使用，开启搜狗的全网加速功能后将IE代理服务器地址设为“127.0.0.1”，端口设为“8081”（8080~8089好像都可以），可以支持https,http访问。</p>
+<p>需要注意的是搜狗浏览器为了防止用户将该功能抽取出来的同时弃用搜狗浏览器，在新版本中教育网加速代理端口号是每次启动浏览器后随机绑定一个端口号，因此<strong>使用时不建议升级搜狗浏览器</strong>。</p>
+<p>&nbsp;</p>
+<p><span style="font-size: large;">2、<strong>确保C盘有足够的剩余空间</strong></span></p>
+<p>iTunes默认的下载并更新的过程是这样的：将更新包下载到C盘 —&gt; 将压缩包解压到C盘某临时目录 —&gt; 备份与升级系统 —&gt; 连接到官方服务器验证 —&gt; 删除之前下载的更新包</p>
+<p>注：Windows XP环境下，iPhone/iPod默认的下载路径为C:\Documents and Settings[用户名]\Application Data\Apple Computer\iTunes\iPod Software Updates，如果是更新iPad即为iPad Software Updates文件夹</p>
+<p>需要注意的是，不管是下载途中因为C盘满提示空间不足，还是验证这一步因为连不上服务器出错，<strong>无论升级成功还是失败，iTunes都会删除C盘中下载的更新包，没有断点续传功能</strong>。 坑爹呢这是！不就是碰了下网线么？！劳资足足下一个小时，裤子都脱了就让我看这个？！</p>
+<p>解决方案的话，除了 <a href="http://www.google.com.hk/webhp?hl=zh-CN&amp;sourceid=cnhp#hl=zh-CN&amp;newwindow=1&amp;safe=strict&amp;site=webhp&amp;q=%E6%9B%B4%E6%94%B9iTunes%E5%A4%87%E4%BB%BD%E8%B7%AF%E5%BE%84%E9%87%8A%E6%94%BEC%E7%9B%98%E7%A9%BA%E9%97%B4&amp;oq=%E6%9B%B4%E6%94%B9iTunes%E5%A4%87%E4%BB%BD%E8%B7%AF%E5%BE%84%E9%87%8A%E6%94%BEC%E7%9B%98%E7%A9%BA%E9%97%B4&amp;gs_l=serp.3...208528.208528.0.208759.1.1.0.0.0.0.0.0..0.0...0.0...1c.1.5.serp.5Je_O3Mr-6g&amp;bav=on.2,or.r_gc.r_pw.&amp;bvm=bv.43148975,d.aGc&amp;fp=b16a1ddf6dc455fc&amp;biw=1280&amp;bih=642" target="_blank" rel="external">更改iTunes备份路径释放C盘空间</a> 之外，也可以考虑使用下面的分区助手将其他盘符的空间搬到C盘来</p>
+<p>官方下载地址：<a href="http://www.disktool.cn/download.html" target="_blank" rel="external">http://www.disktool.cn/download.html</a></p>
+<p>官方教程：<a href="http://www.disktool.cn/jiaocheng/extend-c-drive.html" target="_blank" rel="external">http://www.disktool.cn/jiaocheng/extend-c-drive.html</a></p>
+<p>[caption id=”” align=”aligncenter” width=”444”]<a href="http://www.disktool.cn/jiaocheng/extend-c-drive.html" target="_blank" rel="external"><img src="http://www.disktool.cn/jiaocheng/images/extend-c-drive/extend.gif" alt="" title="C盘分区助手"></a> C盘分区助手[/caption]</p>
+<p><span style="font-size: large;"><strong>3、下载离线包并更新</strong></span></p>
+<p>下方是6.1.3的离线升级包官方下载链接，推荐用迅雷等P2P方式下载，开通会员风味更佳；</p>
+<p>下载离线包后，在Windows系统下“<strong>按住Shift+更新按钮</strong>”，在Mac系统下“<strong>Option+更新按钮</strong>”，选择刚刚的离线包升级即可。</p>
+<p>&nbsp;</p>
+<p>iPhone 5 GSM+CDMA：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2516.20130319.7164R/iPhone5,2_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2516.20130319.7164R/iPhone5,2_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPhone 5 GSM：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2341.20130319.C24tg/iPhone5,1_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2341.20130319.C24tg/iPhone5,1_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPhone 4S：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2611.20130319.Fr54r/iPhone4,1_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2611.20130319.Fr54r/iPhone4,1_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPhone 4 (GSM)：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2610.20130319.Bedr4/iPhone3,1_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2610.20130319.Bedr4/iPhone3,1_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPhone 4(iPhone3,2)：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2444.20130319.exFqm/iPhone3,2_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2444.20130319.exFqm/iPhone3,2_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPhone 4 (CDMA)：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2351.20130319.Fe431/iPhone3,3_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2351.20130319.Fe431/iPhone3,3_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPhone 3GS：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2371.20130319.715gt/iPhone2,1_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2371.20130319.715gt/iPhone2,1_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPad mini WiFi：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2417.20130319.Nh23w/iPad2,5_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2417.20130319.Nh23w/iPad2,5_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPad mini (GSM)：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2461.20130319.Hgt54/iPad2,6_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2461.20130319.Hgt54/iPad2,6_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPad mini (CDMA)：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2356.20130319.54rGB/iPad2,7_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2356.20130319.54rGB/iPad2,7_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPad 4代WiFi：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2407.20130319.vs6yt/iPad3,4_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2407.20130319.vs6yt/iPad3,4_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPad 4代 (GSM)：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2560.20130319.ySu43/iPad3,5_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2560.20130319.ySu43/iPad3,5_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPad 4代 (CDMA)：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2347.20130319.Aqwe3/iPad3,6_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2347.20130319.Aqwe3/iPad3,6_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPad 3代WiFi：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2576.20130319.JeX43/iPad3,1_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2576.20130319.JeX43/iPad3,1_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPad 3代GSM：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2432.20130319.Be867/iPad3,2_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2432.20130319.Be867/iPad3,2_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPad 3代CDMA：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2592.20130319.64uy6/iPad3,3_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2592.20130319.64uy6/iPad3,3_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPad 2 WiFi：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2397.20130319.EEae9/iPad2,1_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2397.20130319.EEae9/iPad2,1_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPad 2 GSM：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2472.20130319.Ta4rt/iPad2,2_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2472.20130319.Ta4rt/iPad2,2_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPad 2 CDMA：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2464.20130319.KF6yt/iPad2,3_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2464.20130319.KF6yt/iPad2,3_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPad 2,4（32nm版本）：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2633.20130319.Xd54r/iPad2,4_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2633.20130319.Xd54r/iPad2,4_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPod touch第四代：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2655.20130319.Wyt54/iPod4,1_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2655.20130319.Wyt54/iPod4,1_6.1.3_10B329_Restore.ipsw</a></p>
+<p>iPod touch第五代：</p>
+<p><a href="http://appldnld.apple.com/iOS6.1/091-2520.20130319.5gty7/iPod5,1_6.1.3_10B329_Restore.ipsw" target="_blank" rel="external">http://appldnld.apple.com/iOS6.1/091-2520.20130319.5gty7/iPod5,1_6.1.3_10B329_Restore.ipsw</a></p>
+<p>&nbsp;</p>
+<p>参考文献：</p>
+<p> 1. 雪花, 《苹果正式发布iOS 6.1.3！》, <a href="http://news.mydrivers.com/1/257/257893.htm" target="_blank" rel="external">http://news.mydrivers.com/1/257/257893.htm</a>, 2013-03-20</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 未分类 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> iOS </tag>
+            
+            <tag> iTunes </tag>
+            
+            <tag> 教育网 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>

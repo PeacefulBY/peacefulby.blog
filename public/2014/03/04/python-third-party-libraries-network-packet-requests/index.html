@@ -1,0 +1,795 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="http,json,python,requests,urllib,urllib2," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="正如 python 第三方库-requests 库官方主页标题所说：It’s HTTP for Humans! 言下之意是说其他HTTP库都不是给Humans用的…… 尽管 python 下的 urllib 和 urllib2 比起 Java 的 HttpURLConnection 已经足够简单易用，相比之下 requests 库依然人性化到逆天。 以访问百度首页为例，urllib2 方式访问：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python第三方库-网络包-requests">
+<meta property="og:url" content="http://yoursite.com/2014/03/04/python-third-party-libraries-network-packet-requests/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="正如 python 第三方库-requests 库官方主页标题所说：It’s HTTP for Humans! 言下之意是说其他HTTP库都不是给Humans用的…… 尽管 python 下的 urllib 和 urllib2 比起 Java 的 HttpURLConnection 已经足够简单易用，相比之下 requests 库依然人性化到逆天。 以访问百度首页为例，urllib2 方式访问：">
+<meta property="og:updated_time" content="2017-03-15T08:15:10.916Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python第三方库-网络包-requests">
+<meta name="twitter:description" content="正如 python 第三方库-requests 库官方主页标题所说：It’s HTTP for Humans! 言下之意是说其他HTTP库都不是给Humans用的…… 尽管 python 下的 urllib 和 urllib2 比起 Java 的 HttpURLConnection 已经足够简单易用，相比之下 requests 库依然人性化到逆天。 以访问百度首页为例，urllib2 方式访问：">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2014/03/04/python-third-party-libraries-network-packet-requests/"/>
+
+
+
+
+
+  <title> Python第三方库-网络包-requests | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/03/04/python-third-party-libraries-network-packet-requests/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Python第三方库-网络包-requests
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-03-04T14:39:40+00:00">
+                2014-03-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>正如 python 第三方库-requests 库<a href="http://docs.python-requests.org/en/latest/index.html" title="requests" target="_blank" rel="external">官方主页</a>标题所说：It’s HTTP for Humans! 言下之意是说其他HTTP库都不是给Humans用的…… 尽管 python 下的 urllib 和 urllib2 比起 Java 的 HttpURLConnection 已经足够简单易用，相比之下 requests 库依然人性化到逆天。 以访问百度首页为例，urllib2 方式访问：</p>
+<pre>[cc lang='python' escaped='true']
+&gt;&gt;&gt; import urllib2
+&gt;&gt;&gt; r = urllib2.Request('http://www.baidu.com') 
+&gt;&gt;&gt; response = urllib2.urlopen(r)
+&gt;&gt;&gt; print response.read()
+&lt;!DOCTYPE html&gt;&lt;!--STATUS OK--&gt;&lt;html&gt;&lt;head...
+[/cc]</pre>
+而requests只需要：
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; import requests
+&gt;&gt;&gt; r = requests.get('http://www.baidu.com')
+&gt;&gt;&gt; print r.text
+&lt;!DOCTYPE html&gt;&lt;!--STATUS OK--&gt;&lt;html&gt;&lt;head...
+[/cc]</pre>
+requests有官方[中文文档](http://cn.python-requests.org/en/latest/ "requests中文文档")（目前更新到1.1.0版）和[英文文档](http://docs.python-requests.org/en/latest/ "requests文档")（更新到最新版），大部分特性和示例都可以在文档中找到。以下记录一些requests的安装、基本应用和常用特性，其他的想到或用到再往上补充吧
+
+### 1、安装
+
+Windows环境下在 [这里](https://github.com/kennethreitz/requests/tarball/master "requests安装包") 下载安装包并解压后，执行 **python setup.py install** 安装 Linux环境下直接执行 **easy_install requests** 或 **pip install requests** 即可
+
+### 2、基本应用-访问
+
+requests支持所有访问http访问方式，常用的Get和Post方式使用方式如下： Get方式下，参数的提交可以采用直接拼接URL的方式，也可以采用params参数传递：
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; r = requests.get('http://www.baidu.com/s?wd=测试')
+&gt;&gt;&gt; r = requests.get('http://www.baidu.com/s?',params={'wd':'测试'})
+[/cc]</pre>
+Post方式下，提交参数的方式和上面第二种方式类似：
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; r = requests.post('http://www.baidu.com/s?',data={'wd':'测试'})
+[/cc]</pre>
+
+<h3 id="3、基本应用-返回"><a href="#3、基本应用-返回" class="headerlink" title="3、基本应用-返回"></a>3、基本应用-返回</h3><p>我们可以通过r.text直接获取返回的html网页，或者通过r.content获取网页的字节内容：</p>
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; r = requests.get('http://www.baidu.com')
+&gt;&gt;&gt; r.text
+u'&lt;!DOCTYPE html&gt;&lt;!--STATUS OK--&gt;&lt;html&gt;&lt;head...'
+&gt;&gt;&gt; r.content
+b'&lt;!DOCTYPE html&gt;&lt;!--STATUS OK--&gt;&lt;html&gt;&lt;head...' 
+[/cc]</pre>
+值得一提的一点是，requests包本身还自带了json解析方法，在现在大量API支持json格式数据的时代，无疑是快速开发一个第三方应用的利器：
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; r = requests.get('https://github.com/timeline.json')
+&gt;&gt;&gt; r.json()
+[{u'repository': {u'open_issues': 0, u'url': 'https://github.com/...
+[/cc]</pre>
+除此以外，我们还可以获取其他返回的相关信息：
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; r = requests.get('http://www.baidu.com')
+&gt;&gt;&gt; r.status_code  #状态码
+200
+&gt;&gt;&gt; r.headers['content-type']  #响应头
+'text/html'
+&gt;&gt;&gt; r.encoding  #网页编码
+'ISO-8859-1'
+&gt;&gt;&gt; r.url
+u'http://www.baidu.com/'
+[/cc]</pre>
+
+<h3 id="4、Basic-Auth"><a href="#4、Basic-Auth" class="headerlink" title="4、Basic Auth"></a>4、Basic Auth</h3><p>在一些大型平台提供的第三方API中，不少API提供了Basic Auth方式登录获取信息，以便开发者进行快速开发与调试，例如<a href="http://open.weibo.com/wiki/2/statuses/home_timeline" target="_blank" rel="external">新浪微博API</a>；以下一段代码展示了如何获取用户所关注的用户的最新微博：</p>
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; url = 'https://api.weibo.com/2/statuses/home_timeline.json?source=XXXXXXXXXX'  #source为AppKey
+&gt;&gt;&gt; username = 'user@example.com'  #新浪微博用户名
+&gt;&gt;&gt; password = 'password'  #密码
+&gt;&gt;&gt; r = requests.get(url,auth=(username, password))
+&gt;&gt;&gt; r.json()
+{u'total_number': 1111, u'previous_cursor': 0, u'hasvisible': False ...
+[/cc]</pre>
+
+<h3 id="5、代理"><a href="#5、代理" class="headerlink" title="5、代理"></a>5、代理</h3><p>如果是编写爬虫或一些其他网络抓取脚本，有时需要采用代理避免被封IP，在requests中可以直接使用proxies属性配置</p>
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; proxies = {"http": "http://0.0.0.0:80/"}
+&gt;&gt;&gt; requests.get("http://www.baidu.com", proxies=proxies)
+[/cc]</pre>
+如果代理需要用户名和密码验证，可以用HTTP Basic Auth方式配置如下：
+<pre>[cc lang='python' escaped="true"]
+&gt;&gt;&gt; proxies = {"http": "http://user:pass@0.0.0.0:80/"} 
+[/cc]</pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/http/" rel="tag"># http</a>
+          
+            <a href="/tags/json/" rel="tag"># json</a>
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/requests/" rel="tag"># requests</a>
+          
+            <a href="/tags/urllib/" rel="tag"># urllib</a>
+          
+            <a href="/tags/urllib2/" rel="tag"># urllib2</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2013/04/05/ios6-system-upgrades-and-updates-under-the-network-of-education-environment-with-6-1-3-offline-package-address/" rel="next" title="教育网环境下iOS6系统的离线升级与更新（附6.1.3离线包地址）">
+                <i class="fa fa-chevron-left"></i> 教育网环境下iOS6系统的离线升级与更新（附6.1.3离线包地址）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/04/07/introduction-to-neo4j-release-notes-and-installation-configurations/" rel="prev" title="Neo4j简介、版本说明与安装配置">
+                Neo4j简介、版本说明与安装配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="John Doe" />
+          <p class="site-author-name" itemprop="name">John Doe</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">Kategorien</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">Tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#3、基本应用-返回"><span class="nav-number">1.</span> <span class="nav-text">3、基本应用-返回</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、Basic-Auth"><span class="nav-number">2.</span> <span class="nav-text">4、Basic Auth</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、代理"><span class="nav-number">3.</span> <span class="nav-text">5、代理</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
